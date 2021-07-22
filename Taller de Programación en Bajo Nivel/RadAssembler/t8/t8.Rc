@@ -1,0 +1,2 @@
+#include "Res/menuMnu.rc"
+#include <Res\t8Dlg.rc>

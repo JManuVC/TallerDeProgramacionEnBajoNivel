@@ -1,0 +1,14 @@
+#define IDR_MENU 10000
+#define IDM_testControls 10001
+#define IDM_getText 10002
+#define IDM_clearText 10003
+#define IDM_exit 10004
+IDR_MENU MENUEX
+BEGIN
+  POPUP "TestControls",IDM_testControls
+  BEGIN
+    MENUITEM "Get Text",IDM_getText
+    MENUITEM "Clear Text",IDM_clearText
+    MENUITEM "Exit",IDM_exit
+  END
+END

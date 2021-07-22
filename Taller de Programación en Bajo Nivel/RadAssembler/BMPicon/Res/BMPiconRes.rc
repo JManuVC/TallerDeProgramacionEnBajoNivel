@@ -1,0 +1,4 @@
+#define dragon							3000
+#define dragon2							3001
+dragon					BITMAP    DISCARDABLE "../../../../../Users/Manuel/Pictures/dragon.bmp"
+dragon2					BITMAP    DISCARDABLE "../../../../../Users/Manuel/Pictures/dragon2.bmp"

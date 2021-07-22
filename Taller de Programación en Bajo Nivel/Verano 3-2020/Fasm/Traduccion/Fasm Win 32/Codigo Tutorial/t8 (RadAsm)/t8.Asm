@@ -1,0 +1,95 @@
+format PE GUI 4.0
+entry inicio
+
+include 'Win32a.inc'
+
+ventana_1	equ		1
+salir_btn	equ		1000
+
+section '.data' data readable writeable
+
+Ist  dd 0
+pWnd dd 0
+hola db "Hola :D",0
+adios db "Adios",0
+testC db "Esto es un test",0
+
+section '.code' code readable executable
+
+inicio:
+	invoke GetModuleHandle,0
+	mov [Ist],eax
+	invoke DialogBoxParam,eax,ventana_1,0,DlgProc,0 
+fin:
+	invoke ExitProcess,0
+
+proc DlgProc,hWnd,uMsg,wParam,lParam
+	push edi esi ebx
+	
+	mov eax,[uMsg]
+	cmp	eax,WM_COMMAND
+	je	jCOMMAND
+	cmp	eax,WM_INITDIALOG
+	je	jINITDIALOG
+	cmp	eax,WM_CLOSE
+	je	jCLOSE
+	xor eax,eax
+	jmp finish
+
+jINITDIALOG:
+	mov eax,[hWnd]
+	mov [pWnd],eax
+	
+	mov eax,1
+	jmp finish
+	
+jCOMMAND:
+	mov eax,[wParam]
+	cmp	eax,salir_btn
+	je	salir
+	cmp eax,10002
+	je mostrarHello
+	cmp eax,10003
+	je mostrarBye
+	cmp eax,10004
+	je salir
+	cmp eax,10005
+	je mostrarTest
+	xor eax,eax
+	jmp finish
+	mostrarHello:
+		invoke MessageBox,[hWnd],hola,0,MB_OK
+		mov eax,1
+		jmp finish
+	mostrarBye:
+		invoke MessageBox,[hWnd],adios,0,MB_OK
+		mov eax,1
+		jmp finish
+	mostrarTest:
+		invoke MessageBox,[hWnd],testC,0,MB_OK
+		mov eax,1
+		jmp finish
+salir:
+	invoke SendMessage,[hWnd],WM_CLOSE,0,0
+	mov eax,1
+	jmp finish
+	
+jCLOSE:	
+	invoke EndDialog,[hWnd],0
+	mov eax,1
+	
+finish:
+	pop ebx esi edi
+	ret
+endp
+
+section '.idata' import data readable writeable
+  ;importamos solo los procedimientos basicos para abrir una ventana
+ 
+  ;otra forma para importar los procedimientos importando archivos INC
+  library kernel32,'KERNEL32.DLL',user32,'USER32.DLL',gdi32,'GDI32.DLL'
+  include 'api\kernel32.inc'
+  include 'api\user32.inc'
+  include 'api\gdi32.inc'
+
+section '.rsrc' resource from 't8.res' data readable

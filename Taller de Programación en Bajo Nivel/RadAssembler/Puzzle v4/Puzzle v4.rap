@@ -1,0 +1,157 @@
+[Project]
+Assembler=fasm
+Type=Win32 App
+Description=Puzzle v4
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+Res.rc=1
+[Files]
+1=Puzzle v4.Asm
+2=Puzzle v4.Inc
+3=Puzzle v4.Rc
+4=Puzzle v4.dlg
+[MakeFiles]
+0=Puzzle v4.rap
+1=Puzzle v4.rc
+2=Puzzle v4.asm
+3=Puzzle v4.obj
+4=Puzzle v4.res
+5=Puzzle v4.exe
+6=Puzzle v4.def
+7=Puzzle v4.dll
+8=Puzzle v4.txt
+9=Puzzle v4.lib
+10=Puzzle v4.mak
+[MakeDef]
+Menu=1,1,0,0,1,1,1,1,0,0,0,0,0,0,0,0
+1=4,O,GORC /r,1
+2=5,O,FASM,2,5
+3=0,
+4=0,0,,5
+5=
+6=
+7=0,0,"$E\OllyDbg",5
+11=4,O,GORC /r,1
+12=5,O,FASM,2,5
+13=0,
+14=0,0,,5
+15=
+16=
+17=0,0,"$E\OllyDbg",5
+[Resource]
+1=num1,3001,0,num1.bmp
+2=num2,3002,0,num2.bmp
+3=num3,3003,0,num3.bmp
+4=num4,3004,0,num4.bmp
+5=num5,3005,0,num5.bmp
+6=num6,3006,0,num6.bmp
+7=num7,3007,0,num7.bmp
+8=num8,3008,0,num8.bmp
+9=num9,3009,0,num9.bmp
+10=num10,3010,0,num10.bmp
+11=num11,3011,0,num11.bmp
+12=num12,3012,0,num12.bmp
+13=num13,3013,0,num13.bmp
+14=num14,3014,0,num14.bmp
+15=num15,3015,0,num15.bmp
+16=img1,3021,0,f1.bmp
+17=img2,3022,0,f2.bmp
+18=img3,3023,0,f3.bmp
+19=img4,3024,0,f4.bmp
+20=img5,3025,0,f5.bmp
+21=img6,3026,0,f6.bmp
+22=img7,3027,0,f7.bmp
+23=img8,3028,0,f8.bmp
+24=i1,3031,0,u1.bmp
+25=i2,3032,0,u2.bmp
+26=i3,3033,0,u3.bmp
+27=i4,3034,0,u4.bmp
+28=i5,3035,0,u5.bmp
+29=i6,3036,0,u6.bmp
+30=i7,3037,0,u7.bmp
+31=i8,3038,0,u8.bmp
+32=i9,3039,0,u9.bmp
+33=i10,3040,0,u10.bmp
+34=i11,3041,0,u11.bmp
+35=i12,3042,0,u12.bmp
+36=i13,3043,0,u13.bmp
+37=i14,3044,0,u14.bmp
+38=i15,3045,0,u15.bmp
+[StringTable]
+[Accel]
+[VerInf]
+[Group]
+Group=Added files,Assembly,Resources,Misc,Modules
+1=2
+2=2
+3=3
+4=3
+[AutoLoad]
+AutoLoad=1,4
+[RADebugBP]
+1=
+[VersionControl]
+Settings=1246
+Milestones=129
+MilestoneEvery=10
+MilestoneEveryCurrent=0
+MilestoneOnBuild=0.0.0.0
+MilestoneOnTime=2
+MilestoneOnDate=0
+MilestoneOnDateWhen=1
+MilestoneOnDateStatus=0
+MilestoneOnDateDate=17
+MilestoneOnDateTimeYear=2020
+MilestoneOnDateTimeMonth=12
+MilestoneOnDateTimeDate=15
+MilestoneOnDateTimeHour=18
+MilestoneOnDateTimeMin=49
+MilestoneOnDateTimeSec=46
+MilestoneOnDateTimeStatus=0
+BackupLocation=C:\Pack RadASM\RadASM\Fasm\Projects\VCBackups\
+CompressionLevel=0
+DefaultComment=Project $N, $Z, Backup Created On $D At $T.
+ExcludeExt1=\
+ExcludeExt2=\
+ExcludeExt3=\
+ExcludeExt4=\
+FileVerLength=4
+FileVer2Range=0
+FileVer3Range=0
+FileVer4Range=0
+ProductVerLength=4
+ProductVer2Range=0
+ProductVer3Range=0
+ProductVer4Range=0
+[Colref]
+0=00FFFFFF
+1=00FFFFFF
+2=00FFFFFF
+3=00FFFFFF
+4=00FFFFFF
+5=00FFFFFF
+6=00FFFFFF
+7=00FFFFFF
+[PTimer]
+PTimer=42935468
+[Collapse]
+1=
+[Size]
+1=0,0,0,0,1281
+4=0,0,0,0
+[GroupExpand]
+GroupExpand=0,1,0,0,1,0
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
+0=

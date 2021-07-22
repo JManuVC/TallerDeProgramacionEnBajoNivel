@@ -1,0 +1,15 @@
+#define IDM_popUp 10001
+#define IDM_sayHello 10002
+#define IDM_SayGoodBye 10003
+#define IDM_Exit 10004
+#define IDM_test 10005
+10000 MENUEX
+BEGIN
+  POPUP "PopUP",IDM_popUp
+  BEGIN
+    MENUITEM "SayHello",IDM_sayHello
+    MENUITEM "SayGoodBye",IDM_SayGoodBye
+    MENUITEM "Exit",IDM_Exit
+  END
+  MENUITEM "Test",IDM_test
+END

@@ -1,0 +1,2 @@
+#include "Res/Puzzle v4Res.rc"
+#include <Res\Puzzle v4Dlg.rc>

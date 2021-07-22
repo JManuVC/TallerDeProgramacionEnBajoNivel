@@ -1,0 +1,157 @@
+convertPrintNum macro reg,base   ;convierte un registro a una base dada
+    local while,break,for,show
+    push ax
+    push bx
+    push cx
+    push dx
+    mov ax,reg
+    mov bx,base
+    mov cx,1
+    while:
+        cmp ax,bx
+        jb  break
+        mov dx,0
+        div bx
+        push dx
+        inc cx
+        jmp while
+    break:
+    push ax
+    mov ah,2
+    for:
+        pop dx
+        add dl,30h
+        cmp dl,'9'
+        jbe show
+        add dl,7h
+        show:
+        int 21h
+        loop for
+    pop dx
+    pop cx
+    pop bx
+    pop ax
+endm
+-----------------------------------------------------------------------
+//mostrar tablas de sum y resta de 1 dig (sin 10)
+mostrarTabla1Dig macro reg,op
+    mov cx,1
+    cmp op,'+'
+    je mostrarSuma
+    cmp op,'-'
+    
+    je mostrarResta
+    
+    mostrarSuma:
+        cmp cx,10
+        je break
+        mov dl,reg
+        mov ah,2
+        int 21h
+        
+        mov dl,'+'
+        int 21h
+        add cl,30h
+        mov dl,cl
+        
+        int 21h
+        sub cl,30h
+        mov dl,'='
+        int 21h   
+        mov al,reg
+        
+        sub al,30h
+        add al,cl
+        add al,30h
+        mov dl,al
+        int 21h 
+        inc cx
+        call salto_linea
+        jmp mostrarSuma
+     break:
+     mostrarResta: 
+        mov cx,0  
+        
+        mov cl,reg
+        sub cl,30h
+       cicloR: 
+        mov dl,reg
+        mov ah,2
+        int 21h
+        mov dl,'-'
+        int 21h 
+        add cl,30h
+        mov dl,cl
+        int 21h
+        sub cl,30h
+        mov dl,'='
+        int 21h
+        
+        mov al,reg
+        sub al,30h
+        sub al,cl
+        mov dl,al
+        add dl,30h
+        int 21h   
+        call salto_linea
+        
+        loop cicloR:
+        
+        
+        
+         
+endm
+-----------------------------------------------------------------------
+capturar 2 digitos
+
+capturar2 macro reg
+    local primer, segundo   
+    primer: 
+        mov al,0
+        mov ah,7
+        int 21h
+        cmp al,30h
+        je primer
+        cmp al,39h
+        ja primer
+        
+                
+        
+        mov reg,al
+        
+        mov dl,al
+        mov ah,2
+        
+        int 21h
+        mov bh,10
+                
+        mov al,reg
+        sub al,30h
+        mul bh
+        mov reg,al
+        
+        jmp segundo
+    
+    segundo:
+        mov al,0
+        mov ah,7 
+        int 21h
+        cmp al,30h
+        je segundo
+        cmp al,39h
+        ja segundo
+        
+        push dx 
+       
+        mov dl,al
+        mov ah,2
+        
+        int 21h
+        pop dx
+       
+        sub al,30h
+        add reg,al
+        
+        
+        
+endm

@@ -1,0 +1,11 @@
+proc saltoLinea
+    mov ah,2
+    mov dl,10
+    int 21h
+    mov dl,13
+    int 21h 
+    
+    mov dx,0
+    ret
+saltoLinea endp
+------------------------------------------------------------------------

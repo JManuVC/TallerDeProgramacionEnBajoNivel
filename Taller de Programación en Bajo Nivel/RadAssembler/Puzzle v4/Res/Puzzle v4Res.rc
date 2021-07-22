@@ -1,0 +1,76 @@
+#define num1							3001
+#define num2							3002
+#define num3							3003
+#define num4							3004
+#define num5							3005
+#define num6							3006
+#define num7							3007
+#define num8							3008
+#define num9							3009
+#define num10							3010
+#define num11							3011
+#define num12							3012
+#define num13							3013
+#define num14							3014
+#define num15							3015
+#define img1							3021
+#define img2							3022
+#define img3							3023
+#define img4							3024
+#define img5							3025
+#define img6							3026
+#define img7							3027
+#define img8							3028
+#define i1								3031
+#define i2								3032
+#define i3								3033
+#define i4								3034
+#define i5								3035
+#define i6								3036
+#define i7								3037
+#define i8								3038
+#define i9								3039
+#define i10								3040
+#define i11								3041
+#define i12								3042
+#define i13								3043
+#define i14								3044
+#define i15								3045
+num1					BITMAP    DISCARDABLE "num1.bmp"
+num2					BITMAP    DISCARDABLE "num2.bmp"
+num3					BITMAP    DISCARDABLE "num3.bmp"
+num4					BITMAP    DISCARDABLE "num4.bmp"
+num5					BITMAP    DISCARDABLE "num5.bmp"
+num6					BITMAP    DISCARDABLE "num6.bmp"
+num7					BITMAP    DISCARDABLE "num7.bmp"
+num8					BITMAP    DISCARDABLE "num8.bmp"
+num9					BITMAP    DISCARDABLE "num9.bmp"
+num10					BITMAP    DISCARDABLE "num10.bmp"
+num11					BITMAP    DISCARDABLE "num11.bmp"
+num12					BITMAP    DISCARDABLE "num12.bmp"
+num13					BITMAP    DISCARDABLE "num13.bmp"
+num14					BITMAP    DISCARDABLE "num14.bmp"
+num15					BITMAP    DISCARDABLE "num15.bmp"
+img1					BITMAP    DISCARDABLE "f1.bmp"
+img2					BITMAP    DISCARDABLE "f2.bmp"
+img3					BITMAP    DISCARDABLE "f3.bmp"
+img4					BITMAP    DISCARDABLE "f4.bmp"
+img5					BITMAP    DISCARDABLE "f5.bmp"
+img6					BITMAP    DISCARDABLE "f6.bmp"
+img7					BITMAP    DISCARDABLE "f7.bmp"
+img8					BITMAP    DISCARDABLE "f8.bmp"
+i1						BITMAP    DISCARDABLE "u1.bmp"
+i2						BITMAP    DISCARDABLE "u2.bmp"
+i3						BITMAP    DISCARDABLE "u3.bmp"
+i4						BITMAP    DISCARDABLE "u4.bmp"
+i5						BITMAP    DISCARDABLE "u5.bmp"
+i6						BITMAP    DISCARDABLE "u6.bmp"
+i7						BITMAP    DISCARDABLE "u7.bmp"
+i8						BITMAP    DISCARDABLE "u8.bmp"
+i9						BITMAP    DISCARDABLE "u9.bmp"
+i10						BITMAP    DISCARDABLE "u10.bmp"
+i11						BITMAP    DISCARDABLE "u11.bmp"
+i12						BITMAP    DISCARDABLE "u12.bmp"
+i13						BITMAP    DISCARDABLE "u13.bmp"
+i14						BITMAP    DISCARDABLE "u14.bmp"
+i15						BITMAP    DISCARDABLE "u15.bmp"
